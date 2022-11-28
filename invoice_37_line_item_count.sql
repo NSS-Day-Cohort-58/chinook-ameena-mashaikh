@@ -1,0 +1,2 @@
+SELECT COUNT(*) AS InvoiceID37 FROM InvoiceLine
+WHERE InvoiceId IS 37
