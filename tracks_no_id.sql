@@ -1,5 +1,10 @@
--- Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include:
-
+/*
+Provide a query that shows all the Tracks, but displays no IDs. 
+The resultant table should include:
+Album name
+Media type
+Genre
+*/
 
 SELECT a.Title as AlbumName, m.Name AS MediaFormat, g.Name AS Genre
 FROM Track t
