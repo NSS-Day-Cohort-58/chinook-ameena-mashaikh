@@ -2,7 +2,8 @@
 --that was purchased.
 
 
-SELECT DISTINCT InvoiceLineId, Name FROM InvoiceLine
+SELECT DISTINCT InvoiceLine.*, Name AS TrackName
+FROM InvoiceLine
 JOIN Track
     ON Track.TrackId = InvoiceLine.TrackId
 
