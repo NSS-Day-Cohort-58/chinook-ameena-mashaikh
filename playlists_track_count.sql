@@ -5,10 +5,9 @@ Playlist name
 Total number of tracks on each playlist
 */
 
-SELECT p.Name as PlaylistName, COUNT(t.TrackId) AS TotalTracks
+SELECT DISTINCT p.Name as PlaylistName, COUNT(pt.TrackId) AS TotalTracks
 FROM PlaylistTrack pt 
 JOIN Playlist p 
     ON pt.PlaylistId = p.PlaylistId
-JOIN Track t 
-    ON t.TrackId = pt.TrackId
-GROUP BY p.Name
+GROUP BY p.PlaylistId
+
